@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% from "bootstrap5/form.html" import render_form, render_field %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block style %}
+{{ super() }}
+
+.form-signin {
+max-width: 330px;
+padding: 1rem;
+}
+
+.error {
+color: red;
+white-space: nowrap;
+}
+{% endblock %}
+
+{% block content %}
+<main class="form-signin w-100 m-auto">
+	<form action="{{ url_for('login') }}" novalidate method="post">
+		{{form.csrf_token}}
+		<h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
+		<!-- {{ render_form(form) }} -->
+		{{ render_field(form.email, class="form-control", id="floatingInput", label="Email") }}
+		{{ render_field(form.password, class="form-control", id="floatingPassword", label="Password") }}
+		{{ render_field(form.submit, class="btn btn-primary w-100 py-2") }}
+		<p class="mt-5 mb-3 text-body-secondary text-center">© erixun 2024</p>
+	</form>
+</main>
+{% endblock %}

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  max-width: 300px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-bottom: 13px;
+  font-size: large;
+  
+  input {
+    min-height: 32px;
+    padding: 5px 10px;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+  }
+
+  .error {
+    color: rgb(176, 4, 4);
+    font-size: 14px;
+  }
+
+  input[type="submit"] {
+    font-size: 16px;
+    padding: 8px 16px;
+    width: 100%;
+    background-color: #0059b9;
+    color: white;
+    cursor: pointer;
+  }
+}

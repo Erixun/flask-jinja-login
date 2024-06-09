@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  {{ bootstrap.load_css() }}
+  <style>
+  {% block style %}
+  form {
+      margin-top: 16px;
+      gap: 8px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    input {
+      padding: 4px 8px;
+    }
+  {% endblock %}
+  </style>
+  <title>
+    {% block title %}
+    <!-- Insert content -->
+    {% endblock %}
+  </title>
+</head>
+
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+  {% block content %}
+  <!-- Insert content -->
+  {% endblock %}
+  {{ bootstrap.load_js() }}
+</body>
+
+</html>
